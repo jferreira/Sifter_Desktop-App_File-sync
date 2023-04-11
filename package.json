@@ -1,0 +1,46 @@
+{
+  "name": "vue-electron",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./app/main.js",
+  "build": {
+    "asar": true,
+    "directories": {
+      "app": "app",
+      "buildResources": "dist",
+      "output": "release/build"
+    },
+    "extraResources": [
+      "./public/**",
+      "./dist/**"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:serve": "electronmon .",
+    "install-app-deps": "cd app && yarn install",
+    "build:windows": "rimraf releases/build && install-app-deps && electron-builder --windows"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "pinia": "^2.0.28",
+    "rimraf": "^4.1.1",
+    "vite-plugin-pages": "^0.28.0",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.8",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electronmon": "^2.0.2",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
+  }
+}

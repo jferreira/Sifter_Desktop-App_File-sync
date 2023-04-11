@@ -1,0 +1,12 @@
+{
+  "name": "Sifter",
+  "version": "1.0.0",
+  "description": "OSINT Tool",
+  "main": "main.js",
+  "author": "Praveen Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "any-text": "^1.2.0",
+    "elasticlunr": "^0.9.5"
+  }
+}
